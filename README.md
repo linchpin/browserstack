@@ -1,7 +1,9 @@
 Browserstack Screenshot API PHP Library
 ============
 
-An easy-to-use PHP library for the Browserstack Screenshots API. Working examples included.
+An easy-to-use PHP library for the Browserstack Screenshots API forked from alexschwarz89/browserstack.
+
+Working examples included.
 
 ## Install
 
@@ -22,15 +24,15 @@ Run `composer install`.
 #### Get an array of available browsers
 
 ```php
-use Alexschwarz89\Browserstack\Screenshots\ScreenshotsAPI;
+use Linchpin\Browserstack\Screenshots\ScreenshotsAPI;
 $screenshots_api = new ScreenshotsAPI( 'username', 'password' );
 $browser_list    = $api->get_browsers();
 ```
 
 #### Generate a screenshot
 ```php
-use Alexschwarz89\Browserstack\Screenshots\Api;
-use Alexschwarz89\Browserstack\Screenshots\Request;
+use Linchpin\Browserstack\Screenshots\Api;
+use Linchpin\Browserstack\Screenshots\Request;
 $screenshots_api = new ScreenshotsAPI( 'account', 'password' );
 $request         = Request::build_request( 'http://www.example.org', 'Windows', '8.1', 'ie', '11.0' );
 $response        = $screenshots_api->send_request( $request );
