@@ -9,32 +9,29 @@ namespace Alexschwarz89\Browserstack\Screenshots;
  *
  * @package Alexschwarz89\Browserstack\Screenshots
  */
-class Response
-{
+class Response {
 
-    /**
-     * @var
-     */
-    private $_response;
+	/**
+	 * @var
+	 */
+	private $_response;
 
-    /**
-     * Sets the response in JSON format
-     *
-     * @param $apiResponse string JSON
-     */
-    public function setApiResponse( $apiResponse )
-    {
-        $this->_response = json_decode($apiResponse,true);
-    }
+	/**
+	 * Sets the response in JSON format
+	 *
+	 * @param string $api_response JSON.
+	 */
+	public function set_api_response( $api_response ) {
+		$this->_response = json_decode( $api_response, true );
+	}
 
-    /**
-     * Get the API response as an associative array
-     *
-     * @return Array
-     */
-    public function getResponse()
-    {
-        return $this->_response;
-    }
+	/**
+	 * Get the API response as an associative array
+	 *
+	 * @return Array
+	 */
+	public function get_response() {
+		return $this->_response;
+	}
 
 }

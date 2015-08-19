@@ -2,8 +2,9 @@
 
 namespace Alexschwarz89\Browserstack\Screenshots;
 
-class Queue extends \ArrayObject
-{
-
-
+/**
+ * Class Queue
+ * @package Alexschwarz89\Browserstack\Screenshots
+ */
+class Queue extends \ArrayObject {
 }

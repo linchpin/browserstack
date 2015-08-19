@@ -10,8 +10,8 @@ class ResponseTest extends PHPUnit_Framework_TestCase
 
         $myArray = array("foo" => "bar");
 
-        $response->setApiResponse( json_encode($myArray) );
+        $response->setApiResponse( json_encode( $myArray ) );
 
-        $this->assertEquals($myArray, $response->getResponse());
+        $this->assertEquals( $myArray, $response->getResponse() );
     }
 }

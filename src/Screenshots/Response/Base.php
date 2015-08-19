@@ -8,22 +8,22 @@ namespace Alexschwarz89\Browserstack\Screenshots\Response;
  */
 class Base {
 
-    public $response;
+	/**
+	 * @var
+	 */
+	public $response;
 
-    /**
-     * @param $apiResponse
-     */
-    public function setApiResponse( $apiResponse )
-    {
-        $this->response = $apiResponse;
-    }
+	/**
+	 * @param $api_response
+	 */
+	public function set_api_response( $api_response ) {
+		$this->response = $api_response;
+	}
 
-    /**
-     * @return mixed
-     */
-    public function  getResponse()
-    {
-        return $this->response;
-    }
-
+	/**
+	 * @return mixed
+	 */
+	public function get_response() {
+		return $this->response;
+	}
 }
