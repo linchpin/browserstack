@@ -8,9 +8,9 @@ require __DIR__ . '/../vendor/autoload.php';
  *
  */
 
-use Alexschwarz89\Browserstack\Screenshots\Api;
+use Linchpin\Browserstack\Screenshots\ScreenshotsAPI;
 
-$api            = new Api('', '');
-$browserList    = $api->getBrowsers();
+$api            = new ScreenshotsAPI( '', '' );
+$browserList    = $api->get_browsers();
 
 var_dump( $browserList );

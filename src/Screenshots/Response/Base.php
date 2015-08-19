@@ -26,7 +26,7 @@ class Base {
 	/**
 	 * @return mixed
 	 */
-	public function get_response() {
+	public function get_api_response() {
 		return $this->response;
 	}
 }

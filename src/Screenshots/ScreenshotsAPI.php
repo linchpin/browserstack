@@ -98,7 +98,7 @@ class ScreenshotsAPI {
 		$res = new Response();
 		$res->set_api_response( $this->_request( 'browsers.json' ) );
 
-		return $res->get_response();
+		return $res->get_api_response();
 	}
 
 	/**
@@ -226,7 +226,7 @@ class ScreenshotsAPI {
 					case 2 :
 						$response->set_api_response( [ 'success' => [ 'Service is available' ] ] );
 
-						return $response->get_response();
+						return $response->get_api_response();
 					case 4 :
 						if ( 404 === $http_code ) {
 							$message = 'API Endpoint not found';
@@ -246,6 +246,6 @@ class ScreenshotsAPI {
 
 		$response->set_api_response( [ 'errors' => [ $message ] ] );
 
-		return $response->get_response();
+		return $response->get_api_response();
 	}
 }

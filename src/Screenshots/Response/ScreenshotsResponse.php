@@ -13,9 +13,9 @@ namespace Linchpin\Browserstack\Screenshots\Response;
  */
 class ScreenshotsResponse extends Base {
 
-	const ERROR_LIMIT_REACHED = 'Parallel limit reached';
-	const ERROR_INVALID_REQUEST = 'Invalid Request';
-	const ERROR_VALIDATION_FAILED = 'Validation failed';
+	const ERROR_LIMIT_REACHED         = 'Parallel limit reached';
+	const ERROR_INVALID_REQUEST       = 'Invalid Request';
+	const ERROR_VALIDATION_FAILED     = 'Validation failed';
 	const ERROR_AUTHENTICATION_FAILED = 'Authentication failed. Please check your login details and retry.';
 
 	/**

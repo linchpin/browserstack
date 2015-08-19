@@ -33,7 +33,7 @@ class Response {
 	 *
 	 * @return Array
 	 */
-	public function get_response() {
+	public function get_api_response() {
 		return $this->_response;
 	}
 

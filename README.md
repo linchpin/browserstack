@@ -31,7 +31,7 @@ $browser_list    = $api->get_browsers();
 
 #### Generate a screenshot
 ```php
-use Linchpin\Browserstack\Screenshots\Api;
+use Linchpin\Browserstack\Screenshots\ScreenshotsAPI;
 use Linchpin\Browserstack\Screenshots\Request;
 $screenshots_api = new ScreenshotsAPI( 'account', 'password' );
 $request         = Request::build_request( 'http://www.example.org', 'Windows', '8.1', 'ie', '11.0' );
