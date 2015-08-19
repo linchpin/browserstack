@@ -1,12 +1,16 @@
 <?php
-namespace Alexschwarz89\Browserstack\Screenshots;
+/**
+ * Forked from https://github.com/alexschwarz89/browserstack
+ */
+
+namespace Linchpin\Browserstack\Screenshots;
 
 /**
  * Class Request
  *
  * A simple Class to build up Screenshot Requests
  *
- * @package Alexschwarz89\Browserstack\Screenshots
+ * @package Linchpin\Browserstack\Screenshots
  */
 class Request {
 

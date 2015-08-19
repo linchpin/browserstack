@@ -1,10 +1,13 @@
 <?php
+/**
+ * Forked from https://github.com/alexschwarz89/browserstack
+ */
 
-namespace Alexschwarz89\Browserstack\Screenshots;
+namespace Linchpin\Browserstack\Screenshots;
 
 /**
  * Class Queue
- * @package Alexschwarz89\Browserstack\Screenshots
+ * @package Linchpin\Browserstack\Screenshots
  */
 class Queue extends \ArrayObject {
 }

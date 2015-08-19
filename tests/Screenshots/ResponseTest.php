@@ -1,6 +1,6 @@
 <?php
 
-use \Alexschwarz89\Browserstack\Screenshots\Response;
+use \Linchpin\Browserstack\Screenshots\Response;
 
 class ResponseTest extends PHPUnit_Framework_TestCase
 {

@@ -1,13 +1,16 @@
 <?php
+/**
+ * Forked from https://github.com/alexschwarz89/browserstack
+ */
 
-namespace Alexschwarz89\Browserstack\Screenshots;
+namespace Linchpin\Browserstack\Screenshots;
 
 /**
  * Class Response
  *
  * Base Class to build a JSON response
  *
- * @package Alexschwarz89\Browserstack\Screenshots
+ * @package Linchpin\Browserstack\Screenshots
  */
 class Response {
 

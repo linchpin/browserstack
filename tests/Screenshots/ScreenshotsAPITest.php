@@ -14,7 +14,7 @@ class ScreenshotsAPITest extends PHPUnit_Framework_TestCase
     /**
      *
      */
-    public static function setUpBeforeClass() {
+    public static function setupBeforeClass() {
         self::$browserstack_API = new ScreenshotsAPI( 'phpunit', 'phpunit' );
     }
 
@@ -54,11 +54,11 @@ class ScreenshotsAPITest extends PHPUnit_Framework_TestCase
             '11.0'
         );
 
-        $this->assertInstanceOf( 'Alexschwarz89\Browserstack\Screenshots\Request', $request );
+        $this->assertInstanceOf( 'Linchpin\Browserstack\Screenshots\Request', $request );
 
         $response = self::$browserstack_API->sendRequest( $request );
 
-        $this->assertInstanceOf( 'Alexschwarz89\Browserstack\Screenshots\Response\ScreenshotsResponse', $response );
+        $this->assertInstanceOf( 'Linchpin\Browserstack\Screenshots\Response\ScreenshotsResponse', $response );
 
         return false;
     }

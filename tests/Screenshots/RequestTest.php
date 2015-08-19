@@ -36,7 +36,7 @@ class RequestTest extends PHPUnit_Framework_TestCase
     {
         $request = Request::buildRequest('http://www.example.org', 'Windows', '8.1', 'ie', '11.0');
 
-        $this->assertInstanceOf('\Alexschwarz89\Browserstack\Screenshots\Request', $request);
+        $this->assertInstanceOf('\Linchpin\Browserstack\Screenshots\Request', $request);
 
     }
 }

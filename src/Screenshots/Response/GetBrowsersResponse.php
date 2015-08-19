@@ -1,10 +1,13 @@
 <?php
+/**
+ * Forked from https://github.com/alexschwarz89/browserstack
+ */
 
-namespace Alexschwarz89\Browserstack\Screenshots\Response;
+namespace Linchpin\Browserstack\Screenshots\Response;
 
 /**
  * Class GetBrowsersResponse
- * @package Alexschwarz89\Browserstack\Screenshots\Response
+ * @package Linchpin\Browserstack\Screenshots\Response
  */
 class GetBrowsersResponse extends Base {
 }

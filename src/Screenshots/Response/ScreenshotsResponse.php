@@ -1,13 +1,15 @@
 <?php
 /**
+ * Forked from https://github.com/alexschwarz89/browserstack
+ *
  * Build out our Response
  */
 
-namespace Alexschwarz89\Browserstack\Screenshots\Response;
+namespace Linchpin\Browserstack\Screenshots\Response;
 
 /**
  * Class ScreenshotsResponse
- * @package Alexschwarz89\Browserstack\Screenshots\Response
+ * @package Linchpin\Browserstack\Screenshots\Response
  */
 class ScreenshotsResponse extends Base {
 
@@ -16,20 +18,20 @@ class ScreenshotsResponse extends Base {
 	const ERROR_VALIDATION_FAILED = 'Validation failed';
 	const ERROR_AUTHENTICATION_FAILED = 'Authentication failed. Please check your login details and retry.';
 
-	// Validation failed (Contains extra Array errors with objects code and field.
-
 	/**
 	 * Contains an Array of finished screenshots
 	 *
 	 * @var
 	 */
 	public $finished_screenshots;
+
 	/**
 	 * Contains an Array of pending screenshots
 	 *
 	 * @var
 	 */
 	public $pending_screenshots;
+
 	/**
 	 * Contains an Array of failed screenshots
 	 *
@@ -46,6 +48,7 @@ class ScreenshotsResponse extends Base {
 	 * @var bool
 	 */
 	public $is_successful = false;
+
 	/**
 	 * If the request was successful contains the Browserstack Job ID
 	 * needed to query the JOB status
@@ -121,7 +124,7 @@ class ScreenshotsResponse extends Base {
 					$this->finished_screenshots[] = $screenshot;
 				} elseif ( 'pending' === $screenshot->state || 'processing' === $screenshot->state ) {
 					$this->pending_screenshots[] = $screenshot;
-				} elseif ( 'timed-out' === $screenshot->state ||  'failed' === $screenshot->state ) {
+				} elseif ( 'timed-out' === $screenshot->state || 'failed' === $screenshot->state ) {
 					$this->failed_screenshots[] = $screenshot;
 				}
 			}

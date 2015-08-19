@@ -1,6 +1,6 @@
 <?php
 
-use Alexschwarz89\Browserstack\Screenshots\Response\Base;
+use Linchpin\Browserstack\Screenshots\Response\Base;
 
 class BaseTest extends PHPUnit_Framework_TestCase
 {
@@ -13,16 +13,16 @@ class BaseTest extends PHPUnit_Framework_TestCase
         $myObject->foo = "bar";
 
         $response->setApiResponse( json_encode($myArray) );
-        $this->assertEquals($myObject , $response->getResponse());
+        $this->assertEquals( $myObject , $response->getResponse() );
     }
 
     public function testGetResponse()
     {
         $response = new Base();
 
-        $myArray = array("foo" => "bar");
+        $myArray = array( "foo" => "bar" );
         $response->response = $myArray;
 
-        $this->assertEquals($myArray, $response->getResponse());
+        $this->assertEquals( $myArray, $response->getResponse() );
     }
 }

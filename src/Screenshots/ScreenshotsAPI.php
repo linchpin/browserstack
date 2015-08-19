@@ -1,13 +1,17 @@
 <?php
-namespace Alexschwarz89\Browserstack\Screenshots;
+/**
+ * Forked from https://github.com/alexschwarz89/browserstack
+ */
 
-use Alexschwarz89\Browserstack\Screenshots\Response\Base;
-use Alexschwarz89\Browserstack\Screenshots\Response\ScreenshotsResponse;
+namespace Linchpin\Browserstack\Screenshots;
+
+use Linchpin\Browserstack\Screenshots\Response\Base;
+use Linchpin\Browserstack\Screenshots\Response\ScreenshotsResponse;
 use tzfrs\Util\Curl;
 
 /**
  * Class ScreenshotsAPI
- * @package Alexschwarz89\Browserstack\Screenshots
+ * @package Linchpin\Browserstack\Screenshots
  */
 class ScreenshotsAPI {
 
@@ -155,14 +159,14 @@ class ScreenshotsAPI {
 	 */
 	private function _request( $endpoint = null, $params = array(), $method = 'GET' ) {
 
-		// Init cURL instance
+		// Init cURL instance.
 		$this->init();
 
-		// Set default options
+		// Set default options.
 		$this->curl->setHTTPHeader( $this->headers );
 
 		$url = self::API_BASE_URL;
-		if ( $endpoint !== null ) {
+		if ( null !== $endpoint ) {
 			$url .= '/' . $endpoint;
 		}
 		if ( is_array( $params ) && count( $params ) > 0 ) {
@@ -171,6 +175,7 @@ class ScreenshotsAPI {
 
 		if ( $this->debug ) {
 			print "Request-Url: $url<br>";
+
 			if ( isset( $query_string ) ) {
 				print "QueryString: $query_string<br>";
 			}
