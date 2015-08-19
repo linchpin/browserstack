@@ -112,17 +112,17 @@ class Request {
 	 * Short-hand function to build a request with a single browser/OS combination
 	 *
 	 * @param string $url
-	 * @param string $os
-	 * @param string $os_version
-	 * @param string $browser
-	 * @param string $browser_version
+	 * @param \ArrayObject $browser
 	 *
 	 * @return Request
 	 */
-	public static function build_request( $url, $os, $os_version, $browser, $browser_version ) {
+	public static function build_request( $url, $browser = array() ) {
 		$request      = new self;
 		$request->url = $url;
-		$request->add_browser( $os, $os_version, $browser, $browser_version );
+
+		if ( ! empty( $browser ) ) {
+			$request->add_browser( $browser['os'], $browser['os_version'], $browser['browser_name'], $browser['browser_version'] );
+		}
 
 		return $request;
 	}
