@@ -1,6 +1,5 @@
-Browserstack
+Browserstack Screenshot API PHP Library
 ============
-[![Latest Stable Version](https://poser.pugx.org/alexschwarz89/browserstack/v/stable)](https://packagist.org/packages/alexschwarz89/browserstack)
 
 An easy-to-use PHP library for the Browserstack Screenshots API. Working examples included.
 
@@ -11,7 +10,7 @@ Install via [composer](https://getcomposer.org):
 ```javascript
 {
     "require": {
-        "alexschwarz89/browserstack": "0.0.2"
+        "linchpinagency/browserstack": "0.0.2"
     }
 }
 ```
@@ -24,31 +23,27 @@ Run `composer install`.
 
 ```php
 use Alexschwarz89\Browserstack\Screenshots\Api;
-$api         = new Api('username', 'password');
-$browserList = $api->getBrowsers();
+$screenshots_api = new ScreenshotsAPI( 'username', 'password' );
+$browser_list    = $api->get_browsers();
 ```
 
 #### Generate a screenshot
 ```php
 use Alexschwarz89\Browserstack\Screenshots\Api;
 use Alexschwarz89\Browserstack\Screenshots\Request;
-$api        = new Api('account', 'password');
-$request    = Request::buildRequest('http://www.example.org', 'Windows', '8.1', 'ie', '11.0');
-$response   = $api->sendRequest( $request );
-$jobId      = $response->jobId;
+$screenshots_api = new ScreenshotsAPI( 'account', 'password' );
+$request         = Request::buildRequest( 'http://www.example.org', 'Windows', '8.1', 'ie', '11.0' );
+$response        = $screenshots_api->sendRequest( $request );
+$job_ID          = $response->job_ID;
 ```
 
 #### Query information about the request
 
 ```php
-$status = $api->getJobStatus('browserstack_jobid');
-if ($status->isFinished()) {
-  foreach ($status->finishedScreenshots as $screenshot) {
+$status = $api->get_job_status( 'browserstack_jobID' );
+if ( $status->is_finished() ) {
+  foreach ( $status->finished_screenshots as $screenshot ) {
     print $screenshot->image_url ."\n";
   }
 }
 ```
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/alexschwarz89/browserstack/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
