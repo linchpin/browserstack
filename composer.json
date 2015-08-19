@@ -1,8 +1,8 @@
 {
-    "name": "alexschwarz89/browserstack",
+    "name": "linchpinagency/browserstack",
     "type": "library",
-    "description" : "Client library for Browserstack Screenshot API",
-    "keywords": ["browserstack", "screenshots"],
+    "description" : "Client library for Browserstack Screenshot API forked from alexschwarz89/browserstack",
+    "keywords": ["browserstack", "screenshots", "linchpin", "quality assurance"],
     "require": {
         "php": ">=5.3.3",
         "tzfrs/curl": "1.0"
